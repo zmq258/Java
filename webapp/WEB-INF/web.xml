@@ -1,0 +1,86 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         version="2.4"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <!-- 显示学生详情 -->
+  <servlet>
+    <display-name>showStudent</display-name>
+    <servlet-name>showStudentServlet</servlet-name>
+    <servlet-class>control.ShowStudentServlet</servlet-class>
+  </servlet>
+
+  <!-- 学生列表 -->
+  <servlet>
+    <servlet-name>ListStudentServlet</servlet-name>
+    <servlet-class>control.ListStudentServlet</servlet-class>
+  </servlet>
+
+  <!-- 新增学生 -->
+  <servlet>
+    <servlet-name>InsertStudentservlet</servlet-name>
+    <servlet-class>control.Insertservlet</servlet-class>
+  </servlet>
+
+  <!-- 删除学生 -->
+  <servlet>
+    <servlet-name>Deleteservlet</servlet-name> <!-- 统一使用Deleteservlet -->
+    <servlet-class>control.Deleteservlet</servlet-class>
+  </servlet>
+
+  <!-- 更新学生信息 -->
+  <servlet>
+    <servlet-name>Updateservlet</servlet-name>
+    <servlet-class>control.Updateservlet</servlet-class>
+  </servlet>
+
+  <!-- 执行更新操作 -->
+  <servlet>
+    <servlet-name>DoUpdateservlet</servlet-name>
+    <servlet-class>control.DoUpdateservlet</servlet-class>
+  </servlet>
+
+  <!-- Excel导入 -->
+  <servlet>
+    <servlet-name>ImportExcelServlet</servlet-name>
+    <servlet-class>control.ImportExcelServlet</servlet-class>
+  </servlet>
+
+  <!-- 映射配置 -->
+  <servlet-mapping>
+    <servlet-name>showStudentServlet</servlet-name>
+    <url-pattern>/showStudent.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ListStudentServlet</servlet-name>
+    <url-pattern>/ListStudentServlet.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>InsertStudentservlet</servlet-name>
+    <url-pattern>/InsertStudentservlet.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Deleteservlet</servlet-name> <!-- 统一使用Deleteservlet -->
+    <url-pattern>/Deleteservlet.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Updateservlet</servlet-name>
+    <url-pattern>/UpdateStudentservlet.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>DoUpdateservlet</servlet-name>
+    <url-pattern>/DoUpdatStudenteservlet.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ImportExcelServlet</servlet-name>
+    <url-pattern>/ImportExcelServlet.do</url-pattern>
+  </servlet-mapping>
+
+</web-app>
